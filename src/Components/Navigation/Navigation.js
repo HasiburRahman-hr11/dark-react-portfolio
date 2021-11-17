@@ -99,6 +99,8 @@ const Navigation = () => {
                     </li>
                 </ul>
             </nav>
+
+            <div className={openMenu ? 'nav_overlay active' : 'nav_overlay'}  onClick={handleCloseMenu}></div>
         </div>
     );
 };

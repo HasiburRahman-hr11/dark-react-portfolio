@@ -30,7 +30,9 @@ const Portfolio = () => {
                                 },
                                 fontWeight: 'normal',
                                 fontFamily: "'Oswald', sans-serif",
-                            }}>My Recent Projects</Typography>
+                            }}>
+                                Bunch of My Creations
+                            </Typography>
                             <Typography variant="h2" component="h2" sx={{
                                 fontFamily: "'Oswald', sans-serif",
                                 fontSize: {

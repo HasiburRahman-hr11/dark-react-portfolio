@@ -17,9 +17,9 @@ const About = () => {
                 <Container fixed>
                     <Box component="div" className="custom_scrollbar about_wrapper">
                         <Grid container spacing={4} sx={{
-                            flexDirection:{
-                                xs:'column-reverse',
-                                md:'row'
+                            flexDirection: {
+                                xs: 'column-reverse',
+                                md: 'row'
                             }
                         }}>
                             <Grid item md={8} xs={12}>
@@ -39,8 +39,11 @@ const About = () => {
                                     maxWidth: '500px',
                                     letterSpacing: '2px',
                                     color: '#ddd',
-                                    marginBottom:'20px'
-                                }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, vero dolorem nostrum reiciendis nam sunt saepe ad eaque perferendis asperiores! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, tempore.</p>
+                                    marginBottom: '20px'
+                                }}>Hi! I am Hasibur Rahman, a full-stack web developer from Dhaka, Bangladesh. I have been developing websites for last 2 years and now it's became a passion to me. I enjoy creating beautiful and functional websites.
+                                    <br />
+                                 I prefer to keep learning, continue challenging myself, and do interesting things that matter.
+                                </p>
 
                                 <a href={cv} className="btn btn_secondary" download>Download CV</a>
 

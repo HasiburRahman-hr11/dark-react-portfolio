@@ -78,17 +78,21 @@ const Contact = () => {
                                 <p style={{
                                     maxWidth: '400px',
                                     letterSpacing: '2px',
-                                    color: '#ddd'
-                                }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, vero dolorem nostrum reiciendis nam sunt saepe ad eaque perferendis asperiores! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, tempore.</p>
+                                    color: '#777'
+                                }}>
+                                    Interested in working together or have any question? Feel free to drop a line. I will get back to you as soon as possible. 
+                                </p>
 
                                 <Box component="div" sx={{
                                     marginTop: '30px',
-                                    color: '#bbb',
+                                    color: '#666',
                                     letterSpacing: '2px'
                                 }}>
-                                    <h4>Email Me : <a href="mailto:mdhasiburrahman47@gmail.com">mdhasiburrahman47@gmail.com</a></h4>
+                                    <h4 style={{
+                                        marginBottom:'5px'
+                                    }}>Email Me : <a href="mailto:mdhasiburrahman47@gmail.com">mdhasiburrahman47@gmail.com</a></h4>
 
-                                    <h4>Call Me : <a href="tel:+8801303606467">+880 1303 606467</a></h4>
+                                    {/* <h4>Call Me : <a href="tel:+8801303606467">+880 1303 606467</a></h4> */}
                                 </Box>
 
                                 <Typography variant="h3" component="h3" sx={{
@@ -104,11 +108,7 @@ const Contact = () => {
                                 }}>Social Links</Typography>
 
                                 <ul className="social_menu">
-                                    <li>
-                                        <a href="https://github.com/gitHasib" target="_blank" rel="noreferrer">
-                                            <GitHubIcon />
-                                        </a>
-                                    </li>
+                                    
                                     <li>
                                         <a href="https://www.linkedin.com/in/hasibur-rahman-32133815a/" target="_blank" rel="noreferrer">
                                             <LinkedInIcon />
@@ -122,6 +122,11 @@ const Contact = () => {
                                     <li>
                                         <a href="https://www.facebook.com/profile.php?id=100005719275494" target="_blank" rel="noreferrer">
                                             <FacebookIcon />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/gitHasib" target="_blank" rel="noreferrer">
+                                            <GitHubIcon />
                                         </a>
                                     </li>
                                 </ul>
