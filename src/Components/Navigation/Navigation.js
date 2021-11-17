@@ -6,7 +6,10 @@ import Box from '@mui/material/Box';
 import CloseIcon from '@mui/icons-material/Close';
 
 import logo from '../../images/logo.png';
-import home from '../../images/home.JPG'
+import homeImg from '../../images/home.JPG'
+import contactImg from '../../images/contact.png';
+import projectsImg from '../../images/projects.png';
+import aboutImg from '../../images/about.png';
 
 
 const Navigation = () => {
@@ -64,15 +67,23 @@ const Navigation = () => {
                 <ul className="nav_menu">
                     <li>
                         <Link to="/">
-                            <img src={home} alt="Home" />
+                            <img src={homeImg} alt="Home" />
                             <div className="nav_link_content">
                                 <span>Home</span>
                             </div>
                         </Link>
                     </li>
                     <li>
+                        <Link to="/about">
+                            <img src={aboutImg} alt="Home" />
+                            <div className="nav_link_content">
+                                <span>About Me</span>
+                            </div>
+                        </Link>
+                    </li>
+                    <li>
                         <Link to="/portfolio">
-                            <img src={home} alt="Home" />
+                            <img src={projectsImg} alt="Home" />
                             <div className="nav_link_content">
                                 <span>Projects</span>
                             </div>
@@ -80,7 +91,7 @@ const Navigation = () => {
                     </li>
                     <li>
                         <Link to="/contact">
-                            <img src={home} alt="Home" />
+                            <img src={contactImg} alt="Home" />
                             <div className="nav_link_content">
                                 <span>Contact</span>
                             </div>

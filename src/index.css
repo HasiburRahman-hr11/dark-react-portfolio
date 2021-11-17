@@ -19,7 +19,10 @@ code {
     monospace;
 }
 
-img , input, form, textarea{
+img,
+input,
+form,
+textarea {
   width: 100%;
 }
 
@@ -45,25 +48,44 @@ ul {
   align-items: center;
 }
 
+.contact_wrapper,
+.about_wrapper {
+  overflow-y: auto;
+  height: 100%;
+  max-height: calc(100vh - 150px);
+}
+
 /* Commonly used Button Styles */
-.btn_primary {
+.btn{
   font-family: "Oswald", sans-serif;
   height: 50px;
   line-height: 47px;
   font-size: 15px;
-  color: #fff;
-  border: 1px solid hsla(0, 0%, 40%, .8);
   padding: 0 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: inline-block;
   transition: all .3s;
+  
+}
+.btn_primary {
+  color: #fff;
+  border: 1px solid hsla(0, 0%, 40%, .8);
+  background-color: transparent;
 }
 
 .btn_primary:hover {
   background-color: #333333;
 }
 
+.btn_secondary {
+  border: 1px solid hsla(0, 0%, 40%, .8);
+  color: #fff;
+  background-color: #333333;
+}
+.btn_secondary:hover {
+  background-color: transparent;
+}
 
 
 /* Scrollbar */

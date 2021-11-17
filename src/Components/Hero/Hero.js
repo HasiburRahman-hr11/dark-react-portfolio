@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-// import styles from './Hero.module.css';
 import './Hero.css';
+
 
 const Hero = () => {
     return (
@@ -50,12 +50,16 @@ const Hero = () => {
                 <Box component="div" sx={{
                     mt: '30px',
                     display: 'flex',
-                    flexWrap: 'wrap'
+                    flexWrap: 'wrap',
+                    justifyContent:{
+                        xs:'center',
+                        md:'flex-start'
+                    }
                 }}>
-                    <Link to="/portfolio" className="btn_primary" style={{
+                    <Link to="/portfolio" className="btn btn_primary" style={{
                         marginRight: '10px'
                     }}>Projects</Link>
-                    <Link to="/contact" className="btn_primary">Contact Me</Link>
+                    <Link to="/contact" className="btn btn_secondary">Contact Me</Link>
                 </Box>
             </Box>
         </Container>

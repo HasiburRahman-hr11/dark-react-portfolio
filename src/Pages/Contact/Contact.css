@@ -2,12 +2,6 @@
     padding-top: 100px;
 }
 
-.contact_wrapper {
-    overflow-y: auto;
-    height: 100%;
-    max-height: calc(100vh - 150px);
-}
-
 .social_menu {
     display: flex;
     align-items: center;

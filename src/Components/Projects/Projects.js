@@ -1,28 +1,17 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Project from '../Project/Project';
+import { projects } from '../../projectsData';
 
 const Projects = () => {
     return (
         <Grid container spacing={3}>
-            <Grid item md={6} xs={12}>
-                <Project/>
-            </Grid>
-            <Grid item md={6} xs={12}>
-                <Project/>
-            </Grid>
-            <Grid item md={6} xs={12}>
-                <Project/>
-            </Grid>
-            <Grid item md={6} xs={12}>
-                <Project/>
-            </Grid>
-            <Grid item md={6} xs={12}>
-                <Project/>
-            </Grid>
-            <Grid item md={6} xs={12}>
-                <Project/>
-            </Grid>
+            {projects.map(project => (
+                <Grid item md={6} xs={12} key={project.link}>
+                    <Project project={project} />
+                </Grid>
+            ))}
+
         </Grid>
     );
 };

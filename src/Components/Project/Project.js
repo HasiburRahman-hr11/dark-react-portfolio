@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
-const Project = () => {
+const Project = ({ project }) => {
     return (
         <Box component="div" className="project">
             <Box component="div" sx={{
@@ -15,7 +15,9 @@ const Project = () => {
                 position: 'relative',
                 overflow: 'hidden'
             }}>
-                <img src="https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+
+                <img src={project.image} alt="" />
+
                 <div className="project_content">
                     <div>
                         <Typography variant="h3" component="h3" sx={{
@@ -27,12 +29,12 @@ const Project = () => {
                             fontWeight: '500',
                             fontFamily: "'Oswald', sans-serif",
                             marginBottom: '15px',
-                            color: '#000'
+                            color: '#ddd'
                         }}>
-                            Project Title
+                            {project.title}
                         </Typography>
                         <Box component="div">
-                            <Link to="/" className="project_btn" >View</Link>
+                            <a href={project.link} className="project_btn" target="_blank" rel="noreferrer">View</a>
                         </Box>
                     </div>
                 </div>
@@ -47,10 +49,10 @@ const Project = () => {
                         marginBottom: '10px',
                         color: '#fff'
                     }}>
-                        Project Title
+                       {project.title}
                     </Typography>
                     <Box component="div">
-                        <Link to="/" className="project_btn" >View</Link>
+                        <a href={project.link} className="project_btn" target="_blank" rel="noreferrer">View</a>
                     </Box>
                 </div>
             </Box>

@@ -12,7 +12,7 @@ const Portfolio = () => {
             <Navigation />
             <div className="portfolio_page page_fixed">
                 <Box component="div" sx={{
-                    paddingTop: '70px'
+                    paddingTop: '100px'
                 }}>
                     <Container fixed>
                         <Box component="div" sx={{
@@ -30,7 +30,7 @@ const Portfolio = () => {
                                 },
                                 fontWeight: 'normal',
                                 fontFamily: "'Oswald', sans-serif",
-                            }}>Look at my works</Typography>
+                            }}>My Recent Projects</Typography>
                             <Typography variant="h2" component="h2" sx={{
                                 fontFamily: "'Oswald', sans-serif",
                                 fontSize: {
