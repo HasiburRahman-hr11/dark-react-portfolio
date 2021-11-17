@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from 'emailjs-com';
 import './Contact.css';
 import Navigation from '../../Components/Navigation/Navigation';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import { Link } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -13,6 +15,47 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 const Contact = () => {
+    const form = useRef();
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+
+    const [alert, setAlert] = useState(false);
+    const [alertType, setAlertType] = useState('');
+    const [alertMessage, setAlertMessage] = useState('');
+
+    const [loading, setLoading] = useState(false);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setLoading(true);
+
+        emailjs.sendForm(process.env.REACT_APP_EMAIL_JS_SERVICE_ID, process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAIL_JS_USER_ID)
+            .then((result) => {
+                console.log(result.text);
+                setLoading(false);
+                setAlert(true);
+                setAlertType('success');
+                setAlertMessage(' Email received successfully. I will reply you very soon.')
+                setFormData({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                });
+            }, (error) => {
+                console.log(error.text);
+                setAlert(true);
+                setAlertType('error');
+                setAlertMessage(" Couldn't receive your email. Please try again later.");
+                setLoading(false);
+            });
+    };
+
     return (
         <>
             <Navigation />
@@ -38,6 +81,16 @@ const Contact = () => {
                                     color: '#ddd'
                                 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, vero dolorem nostrum reiciendis nam sunt saepe ad eaque perferendis asperiores! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, tempore.</p>
 
+                                <Box component="div" sx={{
+                                    marginTop: '30px',
+                                    color: '#bbb',
+                                    letterSpacing: '2px'
+                                }}>
+                                    <h4>Email Me : <a href="mailto:mdhasiburrahman47@gmail.com">mdhasiburrahman47@gmail.com</a></h4>
+
+                                    <h4>Call Me : <a href="tel:+8801303606467">+880 1303 606467</a></h4>
+                                </Box>
+
                                 <Typography variant="h3" component="h3" sx={{
                                     fontFamily: "'Oswald', sans-serif",
                                     fontSize: {
@@ -47,7 +100,7 @@ const Contact = () => {
                                     },
                                     fontWeight: '500',
                                     marginBottom: '20px',
-                                    marginTop: '30px'
+                                    marginTop: '20px'
                                 }}>Social Links</Typography>
 
                                 <ul className="social_menu">
@@ -57,17 +110,17 @@ const Contact = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/in/hasibur-rahman-32133815a/" target="_blank"  rel="noreferrer">
+                                        <a href="https://www.linkedin.com/in/hasibur-rahman-32133815a/" target="_blank" rel="noreferrer">
                                             <LinkedInIcon />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://twitter.com/Hasib11k" target="_blank"  rel="noreferrer">
+                                        <a href="https://twitter.com/Hasib11k" target="_blank" rel="noreferrer">
                                             <TwitterIcon />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.facebook.com/profile.php?id=100005719275494" target="_blank"  rel="noreferrer">
+                                        <a href="https://www.facebook.com/profile.php?id=100005719275494" target="_blank" rel="noreferrer">
                                             <FacebookIcon />
                                         </a>
                                     </li>
@@ -75,12 +128,16 @@ const Contact = () => {
 
                             </Grid>
                             <Grid item md={6} xs={12}>
-                                <form action="">
+                                <form ref={form} onSubmit={sendEmail}>
                                     <div className="input_group">
                                         <input
                                             type="text"
                                             placeholder="Name"
                                             className="contact_input"
+                                            name="name"
+                                            required
+                                            value={formData.name}
+                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                         />
                                     </div>
                                     <div className="input_group">
@@ -88,6 +145,10 @@ const Contact = () => {
                                             type="email"
                                             placeholder="Email"
                                             className="contact_input"
+                                            name="email"
+                                            required
+                                            value={formData.email}
+                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         />
                                     </div>
                                     <div className="input_group">
@@ -95,18 +156,57 @@ const Contact = () => {
                                             type="text"
                                             placeholder="Subject"
                                             className="contact_input"
+                                            name="subject"
+                                            required
+                                            value={formData.subject}
+                                            onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                                         />
                                     </div>
                                     <div className="input_group">
                                         <textarea
                                             placeholder="Message"
                                             className="contact_input"
+                                            name="message"
+                                            required
+                                            value={formData.message}
+                                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                         ></textarea>
                                     </div>
                                     <div>
-                                        <button type="submit" className="contact_btn">Submit</button>
+                                        <button type="submit" className="contact_btn">
+                                            {loading ? (
+                                                <CircularProgress sx={{
+                                                    width: '28px !important',
+                                                    height: '28px !important',
+                                                    color: '#000'
+                                                }} />
+                                            ) : 'Submit'}
+                                        </button>
                                     </div>
                                 </form>
+
+                                {alert && (
+                                    <p
+                                        className={`contact_notification ${alertType === 'error' ? 'error' : 'success'}`}>
+                                        <>
+                                            {alertType === 'success' ? (
+                                                <span>Thank you &#128522;. </span>
+                                            ) : (
+                                                <span>Sorry &#128557;. </span>
+                                            )}
+                                        </>
+                                        {alertMessage}
+                                        <CancelIcon 
+                                        sx={{
+                                            marginLeft:'10px',
+                                            cursor:'pointer',
+                                            width:'30px',
+                                            height:'30px'
+                                        }}
+                                        onClick={()=> setAlert(false)} />
+                                    </p>
+                                )}
+
                             </Grid>
                         </Grid>
                     </Box>

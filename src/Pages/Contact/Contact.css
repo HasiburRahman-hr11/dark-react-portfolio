@@ -1,19 +1,23 @@
-.contact_page{
+.contact_page {
     padding-top: 100px;
 }
-.contact_wrapper{
+
+.contact_wrapper {
     overflow-y: auto;
     height: 100%;
     max-height: calc(100vh - 150px);
 }
-.social_menu{
+
+.social_menu {
     display: flex;
     align-items: center;
 }
-.social_menu li{
+
+.social_menu li {
     margin-right: 15px;
 }
-.social_menu li a{
+
+.social_menu li a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -23,10 +27,12 @@
     color: #333;
     border-radius: 50%;
 }
-.input_group{
+
+.input_group {
     margin-bottom: 15px;
 }
-.contact_input{
+
+.contact_input {
     height: 45px;
     padding: 10px;
     border: 1px solid #333;
@@ -36,11 +42,13 @@
     color: #ddd;
     outline: 0;
 }
-textarea.contact_input{
+
+textarea.contact_input {
     min-height: 120px;
     font-size: 16px;
 }
-.contact_btn{
+
+.contact_btn {
     background-color: #b1b1b1;
     height: 45px;
     padding: 0 25px;
@@ -51,8 +59,32 @@ textarea.contact_input{
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
     border-radius: 3px;
+    min-width: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.contact_input:focus{
+.contact_input:focus {
     border-color: #666;
+}
+
+.contact_notification {
+    position: fixed;
+    left: 0;
+    top: 20px;
+    padding: 10px 10px;
+    text-align: center;
+    background-color: #f1f1f1;
+    color: #191919;
+    z-index: 9999;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.contact_notification.success{
+    color: #077407;
+}
+.contact_notification.error{
+    color: #f01919;
 }
