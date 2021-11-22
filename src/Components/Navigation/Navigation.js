@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import CloseIcon from '@mui/icons-material/Close';
 
-import logo from '../../images/logo.png';
+import logo from '../../images/logo-3.png';
 import homeImg from '../../images/home.JPG'
 import contactImg from '../../images/contact.png';
 import projectsImg from '../../images/projects.png';

@@ -11,7 +11,10 @@
 }
 
 .navbar_brand {
-    display: inline-block;
+    display: flex;
+    max-width: 60px;
+    padding: 10px 0;
+    align-items: center;
 }
 
 .navbar_brand img {
