@@ -21,6 +21,7 @@ const Navigation = () => {
     const handleCloseMenu = () => {
         setOpenMenu(false);
     }
+    
     return (
         <div className="navbar">
             <Box component="div" className="navbar_wrapper" sx={{
@@ -100,7 +101,7 @@ const Navigation = () => {
                 </ul>
             </nav>
 
-            <div className={openMenu ? 'nav_overlay active' : 'nav_overlay'}  onClick={handleCloseMenu}></div>
+            <div className={openMenu ? 'nav_overlay active' : 'nav_overlay'} onClick={handleCloseMenu}></div>
         </div>
     );
 };
