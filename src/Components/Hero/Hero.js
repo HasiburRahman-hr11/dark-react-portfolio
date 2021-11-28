@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import './Hero.css';
 
-import cv from '../../assets/hasibur-rahman-resume.pdf';
+import cv from '../../assets/hasibur-rahman-cv.pdf';
 
 
 const Hero = () => {

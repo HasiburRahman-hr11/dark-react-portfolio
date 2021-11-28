@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import cv from '../../assets/hasibur-rahman-resume.pdf';
+import cv from '../../assets/hasibur-rahman-cv.pdf';
 
 import myImg from '../../assets/images/hasibur-rahman.jpg';
 
