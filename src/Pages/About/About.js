@@ -5,9 +5,9 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import cv from './hrResume.pdf';
+import cv from '../../assets/hasibur-rahman-resume.pdf';
 
-import myImg from '../../images/hasibur-rahman.jpg';
+import myImg from '../../assets/images/hasibur-rahman.jpg';
 
 const About = () => {
     return (
@@ -15,7 +15,7 @@ const About = () => {
             <Navigation />
             <div className="about_page page_fixed">
                 <Container fixed>
-                    <Box component="div" className="custom_scrollbar about_wrapper">
+                    <Box component="div" className="custom_scrollbar page_fixed_wrapper">
                         <Grid container spacing={4} sx={{
                             flexDirection: {
                                 xs: 'column-reverse',
@@ -121,6 +121,8 @@ const About = () => {
                                         <div className="skill_item">CSS3</div>
                                         <div className="skill_item">JavaScript</div>
                                         <div className="skill_item">React Js</div>
+                                        <div className="skill_item">Next Js</div>
+                                        <div className="skill_item">Redux</div>
                                         <div className="skill_item">Node Js</div>
                                         <div className="skill_item">Express Js</div>
                                         <div className="skill_item">MongoDb</div>

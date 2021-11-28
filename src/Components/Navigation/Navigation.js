@@ -5,11 +5,11 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import CloseIcon from '@mui/icons-material/Close';
 
-import logo from '../../images/logo-3.png';
-import homeImg from '../../images/home.JPG'
-import contactImg from '../../images/contact.png';
-import projectsImg from '../../images/projects.png';
-import aboutImg from '../../images/about.png';
+import logo from '../../assets/images/logo-3.png';
+import homeImg from '../../assets/images/home.JPG'
+import contactImg from '../../assets/images/contact.png';
+import projectsImg from '../../assets/images/projects.png';
+import aboutImg from '../../assets/images/about.png';
 
 
 const Navigation = () => {
@@ -83,7 +83,7 @@ const Navigation = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/portfolio">
+                        <Link to="/projects">
                             <img src={projectsImg} alt="Home" />
                             <div className="nav_link_content">
                                 <span>Projects</span>

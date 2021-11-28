@@ -1,16 +1,16 @@
 import React from 'react';
-import './Portfolio.css';
+import './Projects.css';
 import Navigation from '../../Components/Navigation/Navigation';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Projects from '../../Components/Projects/Projects';
+import AllProjects from '../../Components/AllProjects/AllProjects';
 
-const Portfolio = () => {
+const Projects = () => {
     return (
         <>
             <Navigation />
-            <div className="portfolio_page page_fixed">
+            <div className="projects_page page_fixed">
                 <Box component="div" sx={{
                     paddingTop: '100px'
                 }}>
@@ -46,7 +46,7 @@ const Portfolio = () => {
                         </Box>
 
                         <Box component="div" className="custom_scrollbar projects_wrapper">
-                            <Projects/>
+                            <AllProjects/>
                         </Box>
                     </Container>
                 </Box>
@@ -56,4 +56,4 @@ const Portfolio = () => {
     );
 };
 
-export default Portfolio;
+export default Projects;

@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import Project from '../Project/Project';
 import { projects } from '../../projectsData';
 
-const Projects = () => {
+const AllProjects = () => {
     return (
         <Grid container spacing={3}>
             {projects.map(project => (
@@ -16,4 +16,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;
+export default AllProjects;

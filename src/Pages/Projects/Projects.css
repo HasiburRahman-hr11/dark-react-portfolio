@@ -1,4 +1,4 @@
-.portfolio_page{
+.projects_page{
     padding-bottom: 50px;
 }
 .projects_wrapper{
@@ -42,6 +42,7 @@
     font-size: 16px;
     letter-spacing: 3px;
     font-weight: 600;
+    margin: 0 5px;
 }
 
 .project_content_mobile{

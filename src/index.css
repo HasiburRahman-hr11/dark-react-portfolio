@@ -48,8 +48,8 @@ ul {
   align-items: center;
 }
 
-.contact_wrapper,
-.about_wrapper {
+
+.page_fixed_wrapper {
   overflow-y: auto;
   height: 100%;
   max-height: calc(100vh - 150px);
@@ -106,7 +106,7 @@ ul {
 
 
 @media only screen and (max-width:350px) {
-  .btn_primary {
+  .btn_primary , .btn_secondary {
     padding: 0 20px;
     height: 45px;
     font-size: 14px;

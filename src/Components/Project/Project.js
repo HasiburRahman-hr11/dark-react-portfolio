@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 const Project = ({ project }) => {
@@ -32,8 +33,13 @@ const Project = ({ project }) => {
                         }}>
                             {project.title}
                         </Typography>
-                        <Box component="div">
-                            <a href={project.link} className="project_btn" target="_blank" rel="noreferrer">View</a>
+                        <Box component="div" sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}>
+                            <Link to={`/projects/${project._id}`} className="project_btn">Details</Link>
+                            <a href={project.link} className="project_btn" target="_blank" rel="noreferrer">Demo</a>
                         </Box>
                     </div>
                 </div>
@@ -48,10 +54,17 @@ const Project = ({ project }) => {
                         marginBottom: '10px',
                         color: '#fff'
                     }}>
-                       {project.title}
+                        {project.title}
                     </Typography>
-                    <Box component="div">
-                        <a href={project.link} className="project_btn" target="_blank" rel="noreferrer">View</a>
+                    <Box component="div" sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }}>
+                        <Link to={`/projects/${project._id}`} className="project_btn">Details</Link>
+
+                        <a href={project.link} className="project_btn" target="_blank" rel="noreferrer">Demo</a>
+
                     </Box>
                 </div>
             </Box>

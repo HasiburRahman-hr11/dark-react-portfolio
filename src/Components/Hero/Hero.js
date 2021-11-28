@@ -5,6 +5,8 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import './Hero.css';
 
+import cv from '../../assets/hasibur-rahman-resume.pdf';
+
 
 const Hero = () => {
     return (
@@ -56,10 +58,10 @@ const Hero = () => {
                         md:'flex-start'
                     }
                 }}>
-                    <Link to="/portfolio" className="btn btn_primary" style={{
+                    <Link to="/projects" className="btn btn_primary" style={{
                         marginRight: '10px'
                     }}>Projects</Link>
-                    <Link to="/contact" className="btn btn_secondary">Contact Me</Link>
+                    <a href={cv} className="btn btn_secondary" download>Download CV</a>
                 </Box>
             </Box>
         </Container>

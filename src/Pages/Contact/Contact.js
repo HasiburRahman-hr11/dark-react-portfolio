@@ -61,7 +61,7 @@ const Contact = () => {
             <Navigation />
             <div className="contact_page page_fixed">
                 <Container fixed>
-                    <Box component="div" className="custom_scrollbar contact_wrapper">
+                    <Box component="div" className="custom_scrollbar page_fixed_wrapper">
                         <Grid container spacing={4}>
                             <Grid item md={6} xs={12}>
                                 <Typography variant="h2" component="h2" sx={{
@@ -110,7 +110,7 @@ const Contact = () => {
                                 <ul className="social_menu">
                                     
                                     <li>
-                                        <a href="https://www.linkedin.com/in/hasibur-rahman-32133815a/" target="_blank" rel="noreferrer">
+                                        <a href="https://www.linkedin.com/in/hasiburrahman-hr11/" target="_blank" rel="noreferrer">
                                             <LinkedInIcon />
                                         </a>
                                     </li>
@@ -120,12 +120,12 @@ const Contact = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.facebook.com/profile.php?id=100005719275494" target="_blank" rel="noreferrer">
+                                        <a href="https://www.facebook.com/HasiburRahman.hr11/" target="_blank" rel="noreferrer">
                                             <FacebookIcon />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://github.com/gitHasib" target="_blank" rel="noreferrer">
+                                        <a href="https://github.com/HasiburRahman-hr11" target="_blank" rel="noreferrer">
                                             <GitHubIcon />
                                         </a>
                                     </li>
