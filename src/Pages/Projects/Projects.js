@@ -11,9 +11,7 @@ const Projects = () => {
         <>
             <Navigation />
             <div className="projects_page page_fixed">
-                <Box component="div" sx={{
-                    paddingTop: '100px'
-                }}>
+                <Box component="div">
                     <Container fixed>
                         <Box component="div" sx={{
                             textAlign: 'center',

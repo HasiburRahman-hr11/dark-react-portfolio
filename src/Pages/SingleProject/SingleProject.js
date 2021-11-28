@@ -32,7 +32,7 @@ const SingleProject = () => {
             <Navigation />
             <div className="single_page page_fixed">
                 <Box component="div" sx={{
-                    paddingTop: '100px'
+                    paddingTop: '80px'
                 }}>
                     <Container fixed>
                         <Box component="div" className="custom_scrollbar page_fixed_wrapper">
