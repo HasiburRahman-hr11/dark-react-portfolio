@@ -2,11 +2,6 @@
     padding-bottom: 50px;
     padding-top: 80px;
 }
-.projects_wrapper{
-    overflow-y: auto;
-    height: 100%;
-    max-height: calc(100vh - 230px);
-}
 .project img{
     max-height: 350px;
     object-fit: cover;
@@ -31,20 +26,6 @@
     bottom: 0;
 }
 
-.project_btn{
-    background-color: #fff;
-    color: #000;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    border-radius: 3px;
-    font-size: 16px;
-    letter-spacing: 3px;
-    font-weight: 600;
-    margin: 0 5px;
-}
 
 .project_content_mobile{
     display: none;

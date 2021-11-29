@@ -1,51 +1,62 @@
-import project1 from './assets/images/project-1.png';
-import project2 from './assets/images/project-2.png';
-import project3 from './assets/images/project-3.png';
-import project4 from './assets/images/project-4.png';
-import project5 from './assets/images/project-5.png';
-import project6 from './assets/images/project-6.png';
 
+// Thumbnails
+import haatThumbnail from './assets/images/projects/thumbnail/haatThumbanil.png';
+import motorManiaThumbnail from './assets/images/projects/thumbnail/motorThumbnail.png';
+import TourXThumbnail from './assets/images/projects/thumbnail/tourThumbnail.png';
+import redOnionThumbnail from './assets/images/projects/thumbnail/redOnionThumbnail.png';
+import vacationThumbnail from './assets/images/projects/thumbnail/vacationThumbnail.png';
+import agencyThumbnail from './assets/images/projects/thumbnail/agencyThumbnail.png';
+
+// Gallery Images
+import haatGallery1 from './assets/images/projects/gallery/haatGallery-1.png';
+import haatGallery2 from './assets/images/projects/gallery/haatGallery-2.png';
+import haatGallery3 from './assets/images/projects/gallery/haatGallery-3.png';
+import haatGallery4 from './assets/images/projects/gallery/haatGallery-4.png';
 export const projects = [
     {
-        _id:'01',
+        _id: '01',
         title: 'Full-Stack E-commerce website',
-        image: project1,
+        image: haatThumbnail,
         link: 'https://haat-ecommerce-app.web.app',
-        description:`Haat is a full-stack e-commerce website. This website is suitable for selling fashion products like cloth, shoes etc. User can create account by using email, add products to cart, update cart and place orders.
+        gallery: [haatGallery1, haatGallery2, haatGallery3, haatGallery4],
+        points: [
+            'Fully functional e-commerce website',
+            'User can create account, add products to cart and place order',
+            'Admin can mange products, users and orders from Dashboard',
+            'CRUD operation handled by using JWT verification middleware'
+        ],
+        techs: ['React Js', 'Node Js', 'Express Js', 'MongoDB', 'React Router', 'Context-API', 'Material-UI', 'JWT'],
 
-        \n This website has a beautiful dashboard for admin as well. Admin can add, edit, delete product and categories and also can manage orders and users.
-        
-        \n This is my very first full stack e-commerce project. Through this project I have learned so many new things like how to handle cart and orders, mongoDB aggregation and many more.`
     },
     {
-        _id:'02',
+        _id: '02',
         title: 'Motor Mania',
-        image: project2,
+        image: motorManiaThumbnail,
         link: 'https://motor-mania-ab104.web.app'
     },
     {
-        _id:'03',
+        _id: '03',
         title: 'Full-Stack Blog website',
-        image: project5,
+        image: vacationThumbnail,
         link: 'https://vacation-blog-hr.herokuapp.com'
     },
     {
-        _id:'04',
+        _id: '04',
         title: 'Tour-X Travel App',
-        image: project3,
+        image: TourXThumbnail,
         link: 'https://tour-x-hero-assignment.web.app'
     },
     {
-        _id:'05',
+        _id: '05',
         title: 'Red Onion - React App',
-        image: project4,
+        image: redOnionThumbnail,
         link: 'https://red-onion-react-app.netlify.app'
     },
 
     {
-        _id:'06',
+        _id: '06',
         title: 'HTML Agency website',
-        image: project6,
+        image: agencyThumbnail,
         link: 'https://responsive-agency-web.netlify.app'
     }
 ]

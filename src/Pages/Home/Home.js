@@ -1,6 +1,7 @@
-import React from 'react';
+
 import Navigation from '../../Components/Navigation/Navigation';
 import Hero from '../../Components/Hero/Hero';
+
 
 import homeBg from '../../assets/images/home-bg.jpg';
 
@@ -12,6 +13,8 @@ const hmStyles = {
 }
 
 const Home = () => {
+   
+
     return (
         <>
             <Navigation />

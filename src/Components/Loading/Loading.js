@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import CircularProgress from '@mui/material/CircularProgress';
+import ScaleLoader from "react-spinners/ScaleLoader";
 
-const Loading = () => {
+const Loading = ({ loading }) => {
+    let [color, setColor] = useState("#ffffff");
     return (
         <Box component="div" sx={{
             position: 'fixed',
@@ -16,7 +17,7 @@ const Loading = () => {
             justifyContent: 'center',
             zIndex: '999'
         }}>
-            <CircularProgress sx={{ color: '#fff' }} />
+            <ScaleLoader color={color} loading={loading} size={150} />
         </Box>
     );
 };

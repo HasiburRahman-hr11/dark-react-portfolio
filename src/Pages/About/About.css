@@ -17,22 +17,6 @@
     color: #bbb;
 }
 
-.skills{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 600px;
-}
-
-.skills .skill_item{
-    padding: 5px 13px;
-    border: 2px solid #666;
-    background-color: #191919;
-    color: #ddd;
-    border-radius: 3px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
 .about_img_wrapper{
     background-color: #191919;
     padding: 10px;

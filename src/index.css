@@ -51,7 +51,7 @@ ul {
 .page_fixed_wrapper {
   overflow-y: auto;
   height: 100%;
-  max-height: calc(100vh - 150px);
+  max-height: calc(100vh - 100px);
 }
 
 /* Commonly used Button Styles */
@@ -84,6 +84,43 @@ ul {
 }
 .btn_secondary:hover {
   background-color: transparent;
+}
+
+
+.project_btn{
+  background-color: #fff;
+  color: #000;
+  height: 40px;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border-radius: 3px;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+
+.skills{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+.skills.skills-single{
+  max-width: 100%;
+}
+.skills .skill_item{
+  padding: 5px 13px;
+  border: 2px solid #666;
+  background-color: #191919;
+  color: #ddd;
+  border-radius: 3px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 
