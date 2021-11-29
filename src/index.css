@@ -110,7 +110,7 @@ ul {
   flex-wrap: wrap;
   max-width: 600px;
 }
-.skills.skills-single{
+.skills.skills_single{
   max-width: 100%;
 }
 .skills .skill_item{

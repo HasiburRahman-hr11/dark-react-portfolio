@@ -23,7 +23,7 @@ export const projects = [
             'Fully functional e-commerce website',
             'User can create account, add products to cart and place order',
             'Admin can mange products, users and orders from Dashboard',
-            'CRUD operation handled by using JWT verification middleware'
+            'CRUD operations handled by using JWT verification middleware'
         ],
         techs: ['React Js', 'Node Js', 'Express Js', 'MongoDB', 'React Router', 'Context-API', 'Material-UI', 'JWT'],
 

@@ -7,11 +7,16 @@ import Typography from '@mui/material/Typography';
 import { projects } from '../../projectsData';
 import Loading from '../../Components/Loading/Loading';
 import { style } from '@mui/system';
+import ProjectModal from '../../Components/ProjectModal/ProjectModal';
 
 const SingleProject = () => {
     const params = useParams();
     const [project, setProject] = useState({});
     const [loading, setLoading] = useState(true);
+
+    const [modalOpen, setModalOpen] = React.useState(false);
+    const handleModalOpen = () => setModalOpen(true);
+    const handleModalClose = () => setModalOpen(false);
 
     useEffect(() => {
         const getProject = () => {
@@ -50,9 +55,12 @@ const SingleProject = () => {
                                 justifyContent: 'center'
                             }}>
                                 {project?.gallery?.length > 0 && (
-                                    <button className="project_btn" >Screenshots</button>
+                                    <button 
+                                    className="project_btn" 
+                                    onClick={handleModalOpen}
+                                    >Screenshots</button>
                                 )}
-                                <a href={project.link} className="project_btn" target="_blank" rel="noreferrer">Preview</a>
+                                <a href={project.link} className="project_btn" target="_blank" rel="noreferrer">Demo</a>
                             </Box>
 
 
@@ -85,8 +93,8 @@ const SingleProject = () => {
                                         Technology Used
                                     </Typography>
 
-                                    <div className="skills skills-single">
-                                        {project.techs.map((item,i)=>(
+                                    <div className="skills skills_single">
+                                        {project.techs.map((item, i) => (
                                             <div className="skill_item" key={i}>{item}</div>
                                         ))}
                                     </div>
@@ -98,6 +106,14 @@ const SingleProject = () => {
                     </Container>
                 </Box>
             </div>
+
+            {/* Project Modal */}
+            <ProjectModal
+                handleModalOpen={handleModalOpen}
+                modalOpen={modalOpen}
+                handleModalClose={handleModalClose}
+                project={project}
+            />
 
         </>
     );
