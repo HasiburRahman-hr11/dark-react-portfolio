@@ -10,6 +10,7 @@ import homeImg from '../../assets/images/home.JPG'
 import contactImg from '../../assets/images/contact.png';
 import projectsImg from '../../assets/images/projects.png';
 import aboutImg from '../../assets/images/about.png';
+import blogsImg from '../../assets/images/blogs.png';
 
 
 const Navigation = () => {
@@ -76,7 +77,7 @@ const Navigation = () => {
                     </li>
                     <li>
                         <Link to="/about">
-                            <img src={aboutImg} alt="Home" />
+                            <img src={aboutImg} alt="About" />
                             <div className="nav_link_content">
                                 <span>About Me</span>
                             </div>
@@ -84,7 +85,7 @@ const Navigation = () => {
                     </li>
                     <li>
                         <Link to="/projects">
-                            <img src={projectsImg} alt="Home" />
+                            <img src={projectsImg} alt="Projects" />
                             <div className="nav_link_content">
                                 <span>Projects</span>
                             </div>
@@ -92,9 +93,17 @@ const Navigation = () => {
                     </li>
                     <li>
                         <Link to="/contact">
-                            <img src={contactImg} alt="Home" />
+                            <img src={contactImg} alt="Contact" />
                             <div className="nav_link_content">
                                 <span>Contact</span>
+                            </div>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/blogs">
+                            <img src={blogsImg} alt="Blogs" />
+                            <div className="nav_link_content">
+                                <span>Blogs</span>
                             </div>
                         </Link>
                     </li>

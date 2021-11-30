@@ -6,6 +6,7 @@ import Home from './Pages/Home/Home';
 import Projects from './Pages/Projects/Projects';
 import SingleProject from './Pages/SingleProject/SingleProject';
 import Loading from './Components/Loading/Loading';
+import Blogs from './Pages/Blogs/Blogs';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:id" element={<SingleProject />} />
+        <Route path="/blogs" element={<Blogs />} />
       </Routes>
     </BrowserRouter>
   );

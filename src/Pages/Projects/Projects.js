@@ -27,45 +27,43 @@ const Projects = () => {
         <>
             <Navigation />
             <div className="projects_page page_fixed">
-                <Box component="div">
-                    <Container fixed>
 
-
-                        <Box component="div" className="custom_scrollbar page_fixed_wrapper">
-                            <Box component="div" sx={{
-                                textAlign: 'center',
-                                marginBottom: {
-                                    md: '50px',
-                                    xs: '30px'
-                                }
+                <Container fixed>
+                    <Box component="div" className="custom_scrollbar page_fixed_wrapper">
+                        <Box component="div" sx={{
+                            textAlign: 'center',
+                            marginBottom: {
+                                md: '50px',
+                                xs: '30px'
+                            }
+                        }}>
+                            <Typography variant="h5" component="h5" sx={{
+                                fontSize: {
+                                    md: '22px',
+                                    sm: '20px',
+                                    xs: '18px'
+                                },
+                                fontWeight: 'normal',
+                                fontFamily: "'Oswald', sans-serif",
                             }}>
-                                <Typography variant="h5" component="h5" sx={{
-                                    fontSize: {
-                                        md: '22px',
-                                        sm: '20px',
-                                        xs: '18px'
-                                    },
-                                    fontWeight: 'normal',
-                                    fontFamily: "'Oswald', sans-serif",
-                                }}>
-                                    Bunch of My Creations
-                                </Typography>
-                                <Typography variant="h2" component="h2" sx={{
-                                    fontFamily: "'Oswald', sans-serif",
-                                    fontSize: {
-                                        md: '45px',
-                                        sm: '35px',
-                                        xs: '28px'
-                                    },
-                                    fontWeight: 'bold',
-                                    textTransform: 'uppercase'
-                                }}>My Projects</Typography>
-                            </Box>
-
-                            <AllProjects projects={allProjects} />
+                                Bunch of My Creations
+                            </Typography>
+                            <Typography variant="h2" component="h2" sx={{
+                                fontFamily: "'Oswald', sans-serif",
+                                fontSize: {
+                                    md: '45px',
+                                    sm: '35px',
+                                    xs: '28px'
+                                },
+                                fontWeight: 'bold',
+                                textTransform: 'uppercase'
+                            }}>My Projects</Typography>
                         </Box>
-                    </Container>
-                </Box>
+
+                        <AllProjects projects={allProjects} />
+                    </Box>
+                </Container>
+
             </div>
 
         </>
