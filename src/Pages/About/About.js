@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 import cv from '../../assets/hasibur-rahman-cv.pdf';
 
 import myImg from '../../assets/images/hasibur-rahman.jpg';
@@ -24,7 +24,7 @@ const About = () => {
                             }
                         }}>
                             <Grid item md={8} xs={12}>
-                                <Slide bottom>
+                                <Fade>
                                     <Typography variant="h2" component="h2" sx={{
                                         fontFamily: "'Oswald', sans-serif",
                                         fontSize: {
@@ -136,7 +136,7 @@ const About = () => {
 
                                     </Box>
 
-                                </Slide>
+                                </Fade>
 
                             </Grid>
                             <Grid item md={4} xs={12} sx={{
@@ -145,9 +145,11 @@ const About = () => {
                                     xs: '0'
                                 }
                             }}>
-                                <div className="about_img_wrapper">
-                                    <img src={myImg} alt="Hasibur Rahman" />
-                                </div>
+                                <Fade>
+                                    <div className="about_img_wrapper">
+                                        <img src={myImg} alt="Hasibur Rahman" />
+                                    </div>
+                                </Fade>
                             </Grid>
                         </Grid>
                     </Box>

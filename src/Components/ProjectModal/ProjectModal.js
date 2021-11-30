@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import CancelIcon from '@mui/icons-material/Cancel';
 import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
+import Backdrop from '@mui/material/Backdrop';
 
 const style = {
     position: 'absolute',
@@ -37,42 +39,49 @@ const ProjectModal = (props) => {
             onClose={handleModalClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+                timeout: 500,
+            }}
         >
+            <Fade in={modalOpen}>
 
-            <Box sx={style} >
-                <CancelIcon sx={{
-                    position: 'absolute',
-                    top: '-20px',
-                    right: '-20px',
-                    cursor: 'pointer',
-                    color: '#fff',
-                    width: '35px',
-                    height: '35px'
-                }}
-                    onClick={handleModalClose}
-                />
-                <Box className="custom_scrollbar" sx={{
-                    maxHeight: '400px',
-                    overflowY: 'auto',
-                }}>
+                <Box sx={style} >
+                    <CancelIcon sx={{
+                        position: 'absolute',
+                        top: '-20px',
+                        right: '-20px',
+                        cursor: 'pointer',
+                        color: '#fff',
+                        width: '35px',
+                        height: '35px'
+                    }}
+                        onClick={handleModalClose}
+                    />
+                    <Box className="custom_scrollbar" sx={{
+                        maxHeight: '400px',
+                        overflowY: 'auto',
+                    }}>
 
-                    {project.gallery.map((item, i) => (
-                        <Box key={i}>
-                            <Typography
-                                component="h3"
-                                variant="h3"
-                                sx={{
-                                    margin: '10px 0',
-                                    fontSize: '20px',
-                                    fontFamily: "'Oswald', sans-serif",
-                                    textAlign: 'center'
-                                }}
-                            >Screenshot {i + 1}</Typography>
-                            <img src={item} alt="Project Gallery" />
-                        </Box>
-                    ))}
+                        {project.gallery.map((item, i) => (
+                            <Box key={i}>
+                                <Typography
+                                    component="h3"
+                                    variant="h3"
+                                    sx={{
+                                        margin: '10px 0',
+                                        fontSize: '20px',
+                                        fontFamily: "'Oswald', sans-serif",
+                                        textAlign: 'center'
+                                    }}
+                                >Screenshot {i + 1}</Typography>
+                                <img src={item} alt="Project Gallery" />
+                            </Box>
+                        ))}
+                    </Box>
                 </Box>
-            </Box>
+            </Fade>
         </Modal>
     );
 };

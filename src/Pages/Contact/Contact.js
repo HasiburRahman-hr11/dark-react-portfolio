@@ -66,7 +66,7 @@ const Contact = () => {
                     <Box component="div" className="custom_scrollbar page_fixed_wrapper">
                         <Grid container spacing={4}>
                             <Grid item md={6} xs={12}>
-                                <Fade bottom>
+                                <Fade>
                                     <Typography variant="h2" component="h2" sx={{
                                         fontFamily: "'Oswald', sans-serif",
                                         fontSize: {
@@ -137,7 +137,7 @@ const Contact = () => {
 
                             </Grid>
                             <Grid item md={6} xs={12}>
-                                <Fade bottom>
+                                <Fade>
                                     <form ref={form} onSubmit={sendEmail}>
                                         <div className="input_group">
                                             <input

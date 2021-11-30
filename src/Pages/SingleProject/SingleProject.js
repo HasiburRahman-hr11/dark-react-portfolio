@@ -6,7 +6,8 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { projects } from '../../projectsData';
 import Loading from '../../Components/Loading/Loading';
-import { style } from '@mui/system';
+import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 import ProjectModal from '../../Components/ProjectModal/ProjectModal';
 
 const SingleProject = () => {
@@ -42,12 +43,14 @@ const SingleProject = () => {
                 }}>
                     <Container fixed>
                         <Box component="div" className="custom_scrollbar page_fixed_wrapper">
-                            <Typography component="h2" variant="h2" sx={styles.title}>
-                                {project.title}
-                            </Typography>
-                            <Box component="div" sx={styles.thumbnailWrapper}>
-                                <img src={project.image} alt={project.title} style={{ maxHeight: '600px', objectFit: 'cover' }} />
-                            </Box>
+                            <Slide top>
+                                <Typography component="h2" variant="h2" sx={styles.title}>
+                                    {project.title}
+                                </Typography>
+                                <Box component="div" sx={styles.thumbnailWrapper}>
+                                    <img src={project.image} alt={project.title} style={{ maxHeight: '600px', objectFit: 'cover' }} />
+                                </Box>
+                            </Slide>
 
                             <Box component="div" sx={{
                                 display: 'flex',
@@ -56,10 +59,12 @@ const SingleProject = () => {
                             }}>
                                 {project?.gallery?.length > 0 && (
                                     <>
-                                        <button
-                                            className="project_btn"
-                                            onClick={handleModalOpen}
-                                        >Screenshots</button>
+                                        <Slide left>
+                                            <button
+                                                className="project_btn"
+                                                onClick={handleModalOpen}
+                                            >Screenshots</button>
+                                        </Slide>
 
                                         {/* Project Modal */}
                                         <ProjectModal
@@ -70,13 +75,15 @@ const SingleProject = () => {
                                         />
                                     </>
                                 )}
-                                <a href={project.link} className="project_btn" target="_blank" rel="noreferrer">Demo</a>
+                                <Slide right>
+                                    <a href={project.link} className="project_btn" target="_blank" rel="noreferrer">Demo</a>
+                                </Slide>
                             </Box>
 
 
 
                             {project?.points?.length > 0 && (
-                                <>
+                                <Fade>
                                     <Typography component="h2" variant="h2" sx={styles.sectionTitle}>
                                         Project Overview
                                     </Typography>
@@ -93,12 +100,12 @@ const SingleProject = () => {
                                             >{i + 1}. {item}.</li>
                                         ))}
                                     </Box>
-                                </>
+                                </Fade>
                             )}
 
 
                             {project?.techs?.length > 0 && (
-                                <>
+                                <Fade>
                                     <Typography component="h2" variant="h2" sx={styles.sectionTitle}>
                                         Technology Used
                                     </Typography>
@@ -108,7 +115,7 @@ const SingleProject = () => {
                                             <div className="skill_item" key={i}>{item}</div>
                                         ))}
                                     </div>
-                                </>
+                                </Fade>
                             )}
 
                         </Box>
