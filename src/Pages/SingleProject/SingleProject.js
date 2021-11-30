@@ -55,10 +55,20 @@ const SingleProject = () => {
                                 justifyContent: 'center'
                             }}>
                                 {project?.gallery?.length > 0 && (
-                                    <button 
-                                    className="project_btn" 
-                                    onClick={handleModalOpen}
-                                    >Screenshots</button>
+                                    <>
+                                        <button
+                                            className="project_btn"
+                                            onClick={handleModalOpen}
+                                        >Screenshots</button>
+
+                                        {/* Project Modal */}
+                                        <ProjectModal
+                                            handleModalOpen={handleModalOpen}
+                                            modalOpen={modalOpen}
+                                            handleModalClose={handleModalClose}
+                                            project={project}
+                                        />
+                                    </>
                                 )}
                                 <a href={project.link} className="project_btn" target="_blank" rel="noreferrer">Demo</a>
                             </Box>
@@ -107,13 +117,7 @@ const SingleProject = () => {
                 </Box>
             </div>
 
-            {/* Project Modal */}
-            <ProjectModal
-                handleModalOpen={handleModalOpen}
-                modalOpen={modalOpen}
-                handleModalClose={handleModalClose}
-                project={project}
-            />
+
 
         </>
     );
