@@ -1,6 +1,7 @@
 
 // Thumbnails
 import haatThumbnail from './assets/images/projects/thumbnail/haatThumbanil.png';
+import nextLPThumbnail from './assets/images/projects/thumbnail/nextLPThumb.png';
 import motorManiaThumbnail from './assets/images/projects/thumbnail/motorThumbnail.png';
 import TourXThumbnail from './assets/images/projects/thumbnail/tourThumbnail.png';
 import redOnionThumbnail from './assets/images/projects/thumbnail/redOnionThumbnail.png';
@@ -43,10 +44,24 @@ import onionGallery3 from './assets/images/projects/gallery/onionGallery-3.png';
 
 
 import agencyGallery1 from './assets/images/projects/gallery/agencyGallery-1.png';
+import nextLPGallery1 from './assets/images/projects/gallery/nextLPGallery-1.png';
 
 export const projects = [
     {
         _id: '01',
+        title: 'Next JS Landing Page',
+        image: nextLPThumbnail,
+        link: 'https://next-js-landing-page-1.netlify.app',
+        gallery: [nextLPGallery1],
+        points: [
+            'Fully Responsive Next Js Landing Page',
+            'Suitable for Digital agencies'
+        ],
+        techs: ['React Js', 'Next Js', 'React Scroll', 'Theme-UI' , 'RC Drawer' , 'React Icons'],
+
+    },
+    {
+        _id: '02',
         title: 'Haat | Full-Stack E-commerce website',
         image: haatThumbnail,
         link: 'https://haat-ecommerce-app.web.app',
@@ -61,7 +76,7 @@ export const projects = [
 
     },
     {
-        _id: '02',
+        _id: '03',
         title: 'Motor Mania | Niche Website',
         image: motorManiaThumbnail,
         link: 'https://motor-mania-ab104.web.app',
@@ -76,7 +91,7 @@ export const projects = [
         techs: ['React Js', 'Node Js', 'Express Js', 'MongoDB', 'React Router', 'Context-API', 'Material-UI' , 'Firebase']
     },
     {
-        _id: '03',
+        _id: '04',
         title: 'Vacation | Full-Stack Blog website',
         image: vacationThumbnail,
         link: 'https://vacation-blog-hr.herokuapp.com',
@@ -90,7 +105,7 @@ export const projects = [
         techs: ['React Js', 'Node Js', 'Express Js', 'MongoDB', 'React Router', 'Context-API', 'Bootstrap' , 'Multer' , 'Tiny MCE']
     },
     {
-        _id: '04',
+        _id: '05',
         title: 'Tour-X | Travel Agency Website',
         image: TourXThumbnail,
         link: 'https://tour-x-hero-assignment.web.app',
@@ -105,7 +120,7 @@ export const projects = [
         techs: ['React Js', 'Node Js', 'Express Js', 'MongoDB', 'React Router', 'Context-API', 'Material-UI' , 'Firebase']
     },
     {
-        _id: '05',
+        _id: '06',
         title: 'Red Onion | Food Selling Website',
         image: redOnionThumbnail,
         link: 'https://red-onion-react-app.netlify.app',
@@ -119,7 +134,7 @@ export const projects = [
     },
 
     {
-        _id: '06',
+        _id: '07',
         title: 'Steller Landing Page',
         image: agencyThumbnail,
         link: 'https://responsive-agency-web.netlify.app',
