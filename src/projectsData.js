@@ -1,5 +1,6 @@
 
 // Thumbnails
+import charitThumb from './assets/images/projects/thumbnail/charit-thumb.png';
 import haatThumbnail from './assets/images/projects/thumbnail/haatThumbanil.png';
 import nextLPThumbnail from './assets/images/projects/thumbnail/nextLPThumb.png';
 import motorManiaThumbnail from './assets/images/projects/thumbnail/motorThumbnail.png';
@@ -9,6 +10,13 @@ import vacationThumbnail from './assets/images/projects/thumbnail/vacationThumbn
 import agencyThumbnail from './assets/images/projects/thumbnail/agencyThumbnail.png';
 
 // Gallery Images
+import charitGallery1 from './assets/images/projects/gallery/charit-gallery-1.png';
+import charitGallery2 from './assets/images/projects/gallery/charit-gallery-2.png';
+import charitGallery3 from './assets/images/projects/gallery/charit-gallery-3.png';
+import charitGallery4 from './assets/images/projects/gallery/charit-gallery-4.png';
+import charitGallery5 from './assets/images/projects/gallery/charit-gallery-5.png';
+import charitGallery6 from './assets/images/projects/gallery/charit-gallery-6.png';
+
 import haatGallery1 from './assets/images/projects/gallery/haatGallery-1.png';
 import haatGallery2 from './assets/images/projects/gallery/haatGallery-2.png';
 import haatGallery3 from './assets/images/projects/gallery/haatGallery-3.png';
@@ -47,6 +55,25 @@ import agencyGallery1 from './assets/images/projects/gallery/agencyGallery-1.png
 import nextLPGallery1 from './assets/images/projects/gallery/nextLPGallery-1.png';
 
 export const projects = [
+    {
+        _id: '001',
+        title: 'CharitAble React Website',
+        image: charitThumb,
+        link: 'https://charitable-hr.netlify.app',
+        gallery: [charitGallery1,charitGallery2,charitGallery3,charitGallery4,charitGallery5,charitGallery6],
+        points: [
+            'Fully Responsive React Website',
+            'Suitable for Charity Organizations',
+            'Firebase authentication system',
+            'Redux is used for state management',
+            'Nice looking dashboard',
+            'Admin can add, edit, delete cases and blogs',
+            'User can make donations',
+            'Visitors can login using Email-password or Google, Facebook and Github account'
+        ],
+        techs: ['React Js', 'Redux', 'Node Js', 'Express Js' , 'MongoDB', 'Rich Text Editor', 'Material-UI'],
+
+    },
     {
         _id: '01',
         title: 'Next JS Landing Page',
